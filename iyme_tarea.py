@@ -31,11 +31,21 @@ class Ferraris(Scene):
             _, Bx, By = campo(k)
             fin = escala * np.array([Bx, By, 0])
             return Arrow(ORIGIN, fin, buff=0, color = COLORES[k])
-        
-        
+
+        def campo_resultante():
+            BBX = campo(0)[1] + campo(1)[1] + campo(2)[1]
+            BBY = campo(0)[2] + campo(1)[2] + campo(2)[2]
+            return BBX, BBY
+            
+        def flecha_campo_giratorio():
+            BBx, BBy = campo_resultante()
+            fin = escala * np.array([BBx, BBy, 0])
+            return Arrow(ORIGIN, fin, buff=0, color = YELLOW, stroke_width=10)
+
         flecha_a = always_redraw(lambda: flecha(0))
         flecha_b = always_redraw(lambda: flecha(1))
         flecha_c = always_redraw(lambda: flecha(2))
-        self.add(flecha_a, flecha_b, flecha_c)
+        flecha_campo = always_redraw(lambda: flecha_campo_giratorio())
+        self.add(flecha_a, flecha_b, flecha_c, flecha_campo)
 
-        self.play(wt.animate.set_value(8*np.pi), run_time = 10, rate_func=linear)
+        self.play(wt.animate.set_value(2*np.pi), run_time = 10, rate_func=linear)

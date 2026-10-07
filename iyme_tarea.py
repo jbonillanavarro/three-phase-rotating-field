@@ -3,4 +3,6 @@ from manim import *
 
 class Ferraris(Scene):
     def construct(self):
-        estator = Circle();
+        estator = Circle(radius =  3, color = GREY)
+        estator.add()
+        

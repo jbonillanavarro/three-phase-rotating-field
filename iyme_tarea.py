@@ -4,5 +4,6 @@ from manim import *
 class Ferraris(Scene):
     def construct(self):
         estator = Circle(radius =  3, color = GREY)
-        estator.add()
+        self.add(estator)
+
         

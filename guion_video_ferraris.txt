@@ -1,0 +1,75 @@
+GUION DEL VIDEO - CAMPO MAGNETICO GIRATORIO (TEOREMA DE FERRARIS)
+Duracion aproximada: 2 min 50 s (unas 400 palabras)
+A y B son los dos integrantes de la pareja. Cada uno habla dos bloques seguidos.
+
+
+====================================================================
+BLOQUE 1 - HABLA A (0:00 - 0:45)
+Introduccion y las tres corrientes
+En pantalla: titulo y despues el codigo (EJES y la funcion corrientes)
+====================================================================
+
+Hola, somos ___ y ___. Vamos a simular en Python, con la libreria Manim,
+el teorema de Ferraris: como tres corrientes trifasicas crean un campo
+magnetico giratorio. Es el principio de funcionamiento de la maquina
+asincrona: tres bobinas fijas en el estator generan un campo que gira
+sin que nada se mueva.
+
+En el codigo definimos tres fases, a, b y c, con sus ejes a 0, 120 y
+240 grados. La funcion "corrientes" calcula cada una como I0 por el
+seno de omega t menos el angulo de su fase, con I0 igual a 10 amperios.
+Son tres senoides iguales, desfasadas 120 grados entre si. El angulo
+omega t lo controla un ValueTracker, que va de 0 a 2 pi: un periodo
+electrico completo.
+
+
+====================================================================
+BLOQUE 2 - HABLA B (0:45 - 1:25)
+Calculo del vector de induccion magnetica
+En pantalla: el codigo (funciones campo y campo_resultante)
+====================================================================
+
+Para cada bobina aplicamos la ley de Ampere en un solenoide: B es igual
+a mu por N por la corriente, dividido entre L. En nuestro caso, 200
+espiras y 0,3 metros de longitud.
+
+Ese campo sigue la direccion del eje de su bobina, asi que lo
+descomponemos en X e Y con el coseno y el seno del angulo del eje.
+
+El campo resultante es la suma vectorial de los tres: sumamos las tres
+componentes X por un lado y las tres componentes Y por otro.
+
+
+====================================================================
+BLOQUE 3 - HABLA A (1:25 - 2:10)
+Ejecucion y resultado
+En pantalla: ejecutar el programa y mostrar el GIF
+====================================================================
+
+Ejecutamos el programa. Las flechas roja, verde y azul son los campos
+de cada fase: no giran, solo crecen y decrecen sobre su propio eje, es
+decir, pulsan.
+
+La flecha amarilla es la suma de las tres. Su longitud no cambia: vale
+siempre 1,5 veces B0, y su punta recorre el circulo del estator. Aunque
+cada campo solo pulsa, el desfase de 120 grados en el espacio y en el
+tiempo hace que la suma gire.
+
+
+====================================================================
+BLOQUE 4 - HABLA B (2:10 - 2:50)
+Frecuencia, velocidad de giro y cierre
+En pantalla: el GIF en bucle
+====================================================================
+
+En un periodo de las corrientes el vector da exactamente una vuelta:
+gira a la misma velocidad angular omega, que es la velocidad de
+sincronismo. A 50 hercios serian 50 vueltas por segundo, es decir,
+3000 revoluciones por minuto.
+
+Si subimos la frecuencia de las corrientes, el campo gira mas rapido,
+en la misma proporcion. Y si intercambiamos dos fases, invirtiendo la
+secuencia, el campo gira en sentido contrario: asi se invierte el giro
+de un motor.
+
+Con esto queda comprobado el teorema de Ferraris. Gracias.

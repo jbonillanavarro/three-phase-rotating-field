@@ -43,9 +43,9 @@ descompone en X e Y según el eje de la bobina.
 En pantalla: el código, desde "flecha" hasta "self.play"
 ====================================================================
 
-La función flecha dibuja el campo de cada fase desde el origen. En
-campo_resultante sumamos las componentes X e Y de las tres fases, y
-esa suma se dibuja en amarillo. Con always_redraw las flechas se
+Esta función dibuja el campo de cada fase desde el origen. En
+campo_resultante sumamos las componentes X e Y de los 3 campos, y
+esa suma se dibuja en amarillo. Con always_redraw las flechas de los campos se
 recalculan en cada fotograma, y self.play lleva omega t de 0 a 2 pi en
 10 segundos: un periodo completo.
 
@@ -66,7 +66,4 @@ desfase de 120 grados, tanto en el espacio como en el tiempo.
 En pantalla: el GIF en bucle
 ====================================================================
 
-En un periodo de las corrientes el vector da una vuelta exacta: gira a
-la velocidad de sincronismo. Si subimos la frecuencia, gira más
-rápido, y si intercambiamos dos fases, gira en sentido contrario. Con
-esto queda comprobado el teorema de Ferraris. Gracias.
+omega t va de 0 a 2 pi en 10 segundos, que es un periodo de las corrientes, y en ese tiempo la flecha amarilla da justo una vuelta: gira a la velocidad de sincronismo. Si cambiamos run_time de 10 a 5, el periodo se reduce a la mitad, la frecuencia se duplica y el campo gira el doble de rápido. Con esto queda comprobado el teorema de Ferraris. Gracias.

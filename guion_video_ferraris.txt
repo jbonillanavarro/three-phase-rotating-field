@@ -8,7 +8,7 @@ Seis párrafos: 1 de Rodrigo, 3 de Jorge y 2 de Rodrigo.
 En pantalla: título o el GIF de fondo
 ====================================================================
 
-Hola, somos Jorge Bonilla y Rodrigo. Hemos simulado en Python, con la
+Hola, somos Jorge Bonilla y Rodrigo Astilleros. Hemos simulado en Python, con la
 librería Manim, el teorema de Ferraris: tres corrientes trifásicas en
 bobinas fijas crean un campo magnético que gira. Es el principio de
 funcionamiento de la máquina asíncrona.

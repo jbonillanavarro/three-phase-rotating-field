@@ -19,15 +19,15 @@ funcionamiento de la máquina asíncrona.
 En pantalla: el código, desde "class Ferraris" hasta "escala"
 ====================================================================
 
-Hemos creado la clase Ferraris, que hereda de Scene. Dibujamos un
-círculo de radio 3, que es el estátor, y definimos los ejes de las
-tres fases a 0, 120 y 240 grados, cada una con su color. A I0, mu, N
-y L les damos valores arbitrarios, y con ellos calculamos B0, el campo
-máximo de una bobina.
+Hemos creado una clase llamada Ferraris, que es heredada de la clase Scene de manim. En esta dibujamos un
+círculo de radio 3, que va a representar al estátor, y definimos los ejes de las
+tres fases a 0, 120 y 240 grados, cada una con su color. A la corriente maxíma, I0, la permeabilidad mu, el numero de espiras N
+y la longitud de la espira L les damos valores arbitrarios, y con ellos calculamos el el campo
+máximo de una bobina B0.
 
 
 ====================================================================
-3 - JORGE - Corrientes y campo
+3 - Rodrigo - Corrientes y campo
 En pantalla: el código, "wt", "corrientes" y "campo"
 ====================================================================
 
@@ -62,7 +62,7 @@ desfase de 120 grados, tanto en el espacio como en el tiempo.
 
 
 ====================================================================
-6 - RODRIGO - Velocidad de giro y cierre
+6 - JORGE - Velocidad de giro y cierre
 En pantalla: el GIF en bucle
 ====================================================================
 
